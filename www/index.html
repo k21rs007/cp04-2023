@@ -199,9 +199,7 @@
         $("#time").html("経過時間: 0");
         $("#remain").html("残り時間: " + period);
     }
-  
-    
- 
+
     // 繰り返し実行する処理
     function timer(){  
         if(active) {
@@ -213,6 +211,21 @@
         if(rest < 0){
             active = false;
             alarm();
+        }
+        if(rest < 25){
+            $("#time").html("あ 経過時間: " + time); 
+        }
+         if(rest < 20){
+            $("#time").html("あい 経過時間: " + time); 
+        }
+          if(rest < 15){
+            $("#time").html("あいう 経過時間: " + time); 
+        }
+          if(rest < 10){
+            $("#time").html("あいうえ 経過時間: " + time); 
+        }
+          if(rest < 5){
+            $("#time").html("あいうえお 経過時間: " + time); 
         }
         }
         
